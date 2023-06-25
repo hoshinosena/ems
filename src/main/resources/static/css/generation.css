@@ -1,0 +1,41 @@
+body,section{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+body,section,h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+
+.input{
+    margin: 0;
+    padding: 0.5em 1em;
+    line-height: 175%;
+    border: 1px solid rgb(0,0,0,0.1);
+    background: #00000099;
+    color: #ffffff;
+    opacity: 70%;
+}
+
+.input--block{
+    margin-bottom: 0.5em;
+    display: block;
+    width: 90%;
+}
+
+.button{
+    margin: 0;
+    padding: 0.5em 1em;
+    line-height: 175%;
+    border: 1px solid rgb(0,0,0,0.1);
+    background: #2196f3ba;
+    color: #000;
+    opacity: 60%;
+}
+
+.button--line{
+    margin-bottom: 0.5em;
+    width: 49%;
+}

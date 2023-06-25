@@ -1,0 +1,182 @@
+div{
+    margin : 0;
+    padding: 0;
+    border: 0;
+}
+
+.mask{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+}
+
+.nav{
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 14%;
+    height: 100%;
+    background-color: rgba(0,0,0,.65);
+}
+
+.fix{
+    display: block;
+    float: left;
+}
+
+.font1{
+    font-size: 1.5em;
+    color: azure;
+    text-align: left;
+}
+
+.container{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../img/background.jpg") ;
+    background-size: 100% 100%;
+}
+
+.action{
+    margin : 0;
+    padding: 0.8em 2em;
+    border: 1px;
+    background: transparent;
+    width: 100%;
+}
+
+.main{
+    top: 0;
+    left: 14%;
+    position: fixed;
+    display: block;
+    background-color: transparent;
+    width: 86%;
+    height: 100%;
+    overflow: auto;
+}
+
+.left{
+    display: inline;
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+.middle{
+    margin: 2rem 0 4rem 0;
+    padding: 0 1rem 1rem;
+    position: relative;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3), 0 2.5rem 5rem 0 rgba(0, 0, 0, .4);
+    display: inline;
+    background-color: rgba(255,255,255,.65);
+    width: 55%;
+    float: left;
+}
+
+.right{
+    display: inline;
+    width: 20%;
+    height: 100%;
+    float: right;
+}
+
+.name{
+    display: inline;
+    text-align: right;
+}
+
+#price,#money,#unki{
+    left: 40%;
+    position: relative;
+}
+
+.unki{
+    display: inline;
+}
+
+.table{
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #c6c6c6 !important;
+    margin-bottom: 20px;
+}
+
+.table th{
+    border-collapse: collapse;
+    border-right: 1px solid #c6c6c6 !important;
+    border-bottom: 1px solid #c6c6c6 !important;
+    background-color: transparent !important;
+    padding: 5px 9px;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.table thead{
+    background: #2196f3ba;
+    color: #000;
+    opacity: 60%;
+}
+
+.table td{
+    border-collapse: collapse;
+    border-right: 1px solid #c6c6c6 !important;
+    border-bottom: 1px solid #c6c6c6 !important;
+    padding: 5px 9px;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+.table tr:nth-child(odd){
+    background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.table tr:nth-child(even){
+    background-color: rgba(248, 248, 248, 0.8) !important;
+}
+
+.g-container{
+    top: 20%;
+    width: 100%;
+    height: 65%;
+    position: relative;
+    border-radius: 25px;
+    background: rgba(238, 238, 238, 0.8);
+}
+.g-progress{
+    /* 调节width即为调节进度
+    width: 10%;*/
+    width: 0;
+    height: 100%;
+    border-radius: 25px 0 0 25px;
+    background: linear-gradient(90deg, #0f0, #0ff);
+    transition: width .2s linear;
+}
+
+.move{
+    width: 100%;
+    height: 10%;
+    background: hsl(0, 0%, 100%, 0.5);
+    transition: 0.3s background-color ease;
+}
+
+.fix1{
+    left: 50%;
+    position: fixed;
+    -webkit-transform: translate(-50%, -50%);
+    color: #676a6c;
+}
+.fix2{
+    width: 40em;
+    height: 1.5em;
+    top: 80%;
+    left: 50%;
+    position: fixed;
+    -webkit-transform: translate(-50%, -50%);
+}

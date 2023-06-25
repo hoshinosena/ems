@@ -1,0 +1,1421 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>api</title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2113.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px 'PingFang SC'}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Helvetica; min-height: 14.0px}
+    span.s1 {font: 12.0px 'PingFang SC'}
+    span.s2 {font: 12.0px Helvetica}
+    table.t1 {border-collapse: collapse}
+    td.td1 {border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+  </style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">请求</span>URL</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p2">请求方式</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p2">请求格式</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p2">参数名</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p2">必传</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p2">类型</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p2">备注</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">admin<span class="s1">与</span>user<span class="s1">差异</span></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p2">响应格式</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p2">响应参数</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p2">必含</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p2">类型</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p2">备注</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1">api/user/get</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">POST</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">JSON</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">username</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">TRUE</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">String</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p2"><span class="s2">user</span>无视这些非必传参数只返回自己的信息</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">JSON</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">code</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">TRUE</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">String</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">password</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">message</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">uid</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">FALSE</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td colspan="3" valign="middle" class="td1">
+        <p class="p2">全为空时全表查询，否则根据其中一个参数查询，互斥</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">user</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">TRUE<span class="s1">但二返一</span></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">Object</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p2"><span class="s2">uid</span>查询返回</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">name</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">users</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">Object Array</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">非</span>uid<span class="s1">查询返回不含</span>tel,address,info</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">money</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">page</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">FALSE</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">Number</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p2">非<span class="s2">uid</span>查询返回，<span class="s2">page</span>为经过修正的当前块数，<span class="s2">pages</span>为总块数，与<span class="s2">users</span>一起返回</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">number</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td colspan="3" valign="middle" class="td1">
+        <p class="p2">返回结果集时可以分块返回数据，<span class="s2">number</span>用于选择块，每个块至多含有<span class="s2">15</span>条结果</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">pages</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1">api/user/add</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">POST</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">JSON</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">username</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">TRUE</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">String</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p2"><span class="s2">user</span>没有权限操作</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">JSON</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">code</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">TRUE</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">String</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">password</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">user</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">Object</p>
+      </td>
+      <td colspan="3" valign="middle" class="td1">
+        <p class="p1"><span class="s1">至少含有非空属性</span>username,password,name<span class="s1">。</span>Role,tel,address,info<span class="s1">可以为空</span></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">message</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1">api/user/update</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">POST</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">JSON</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">username</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">TRUE</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">String</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p2"><span class="s2">user</span>只能更新自己</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">JSON</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">code</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">TRUE</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">String</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">password</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">user</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">Object</p>
+      </td>
+      <td colspan="3" valign="middle" class="td1">
+        <p class="p1">uid,username<span class="s1">必须为空，</span>name<span class="s1">和</span>passowrd<span class="s1">非空，</span>role,tel,address,info<span class="s1">可以为空</span></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">message</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1">api/user/delete</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">POST</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">JSON</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">username</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">TRUE</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">String</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p2"><span class="s2">user</span>没有权限操作</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">JSON</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">code</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">TRUE</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">String</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">password</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">message</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">uid</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1">api/record/get</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">POST</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">JSON</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">username</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">TRUE</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">String</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">user<span class="s1">只能查询自己的</span>records</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">JSON</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">code</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">TRUE</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">String</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">password</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">message</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">uid</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">FALSE</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td colspan="3" valign="middle" class="td1">
+        <p class="p2"><span class="s2">uid</span>为空时全表查询，否则根据<span class="s2">uid</span>查询。<span class="s2">number</span>用于选择块，每个块至多含有<span class="s2">15</span>条结果</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">records</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">Object Array</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">number</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">page</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">Number</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p2">非<span class="s2">uid</span>查询返回，<span class="s2">page</span>为经过修正的当前块数，<span class="s2">pages</span>为总块数，于<span class="s2">users</span>一起返回</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">pages</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1">api/record/add</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">POST</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">JSON</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">username</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">TRUE</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">String</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">admin<span class="s1">只能扣费，</span>user<span class="s1">只能充值</span></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">JSON</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">code</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">TRUE</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">String</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">password</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">message</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">record</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">Object</p>
+      </td>
+      <td colspan="2" valign="middle" class="td1">
+        <p class="p1">uid<span class="s1">和</span>changes<span class="s1">必须非空，</span>info<span class="s1">可以为空</span></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1">api/eprice/get</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">POST</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">JSON</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">username</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">TRUE</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">String</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p2"><span class="s2">user</span>只能获取最新电价</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">JSON</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">code</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">TRUE</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">String</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">password</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">message</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">select</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">FALSE</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">price</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">TRUE<span class="s1">但二返一</span></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">Object</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">select<span class="s1">为</span>"latest"<span class="s1">返回</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">prices</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">Object Array</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">select<span class="s1">不为</span>"latest"<span class="s1">返回</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">number</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td colspan="3" valign="middle" class="td1">
+        <p class="p2">返回结果集时可以分块返回数据，<span class="s2">number</span>用于选择块，每个块至多含有<span class="s2">15</span>条结果</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">page</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">FALSE</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">Number</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p2">非<span class="s2">"latest"</span>查询返回，<span class="s2">page</span>为经过修正的当前块数，<span class="s2">pages</span>为总块数，于<span class="s2">users</span>一起返回</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">pages</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1">api/eprice/add</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">POST</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">JSON</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">username</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">TRUE</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">String</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p2"><span class="s2">user</span>没有权限操作</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">JSON</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">code</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">TRUE</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">String</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">password</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">message</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">eprice</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">eprice<span class="s1">必须非空</span></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

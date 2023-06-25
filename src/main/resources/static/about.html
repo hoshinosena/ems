@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>about</title>
+    <link rel="stylesheet" type="text/css" href="css/generation.css">
+    <link rel="stylesheet" type="text/css" href="css/about.css">
+    <script src="js/jquery-1.9.1-min.js"></script>
+    <script src="js/jquery.cookie-1.4.1-min.js"></script>
+</head>
+<body>
+<div class="main">
+    <div class="box">
+        <div class="middle">
+            <div style="text-align: center"><h1>关于</h1></div></br></br></br>
+            <div>
+                <div>
+                    <h2 style="text-align: center">作者</h2></br></br>
+                    <div style="display: flex">
+                        <div style="width: 10%"></div>
+                        <img src="img/himenosena.jpg" width="33.3%", height="33.3%">
+                        <div style="width: 4%;height: 33.3%"></div>
+                        <div>
+                            <div>
+                                <h2>EMS</h2>
+                                <h3>EMS(Electricity Management System)</h3>
+                                <h3>软体版本 1.2.1</h3>
+                                <h3>无料 Web Application 一部</h3>
+                                <h3>Apache-2.0 License 使用</h3>
+                            </div>
+                            <div style="height: 5%"></div>
+                            <h3>developed by <a href="javascript:void(0)" onclick="window.open('https://github.com/hoshinosena')">星野星奏</a></h3>
+                            <div style="height: 5%"></div>
+                            <h3>完成日期: 2023.6.17(土)</h3>
+                            <div style="height: 5%"></div>
+                            <h2 style="color: #ff7a9c;float: bottom;position: absolute">姫野星奏は我が嫁!!</h2>
+                        </div>
+                        <div style="width: 10%;float: right"></div>
+                    </div>
+                </div>
+            </div></br></br></br>
+            <div>
+                <div>
+                    <h2 style="text-align: center">Web API</h2></br></br>
+                    <img src="misc/api.png" width="100%" height="66%">
+                    <div>
+                        <!--                    <button style="width: 10%" class="button button&#45;&#45;line" onclick="url(0)">在线预览</button>-->
+                        <button style="width: 15%;float: right" class="button button--line" onclick="url(1)">获取Excel文件</button>
+                    </div>
+                </div></br></br></br>
+                <div>
+                    <h2 style="text-align: center">错误代码</h2></br></br>
+                    <img src="misc/error.png" width="100%" height="38.5%">
+                    <div>
+                        <!--                    <button style="width: 10%" class="button button&#45;&#45;line" onclick="url(2)">在线预览</button>-->
+                        <button style="width: 15%;float: right" class="button button--line" onclick="url(3)">获取Excel文件</button>
+                    </div>
+                </div>
+            </div></br></br></br>
+            <div>
+                <h2 style="text-align: center">致谢</h2></br></br>
+                <h3 class="fix"><a href="javascript:void(0)" onclick="window.open('https://spring.io/')">Spring Framework</a> 一个轻量级 Java Web 框架</h3>
+                <h3 class="fix"><a href="javascript:void(0)" onclick="window.open('https://spring.io/projects/spring-boot')">Spring Boot</a> 一个基于 Spring Framework 的快速开发套件</h3>
+                <h3 class="fix"><a href="javascript:void(0)" onclick="window.open('https://vuejs.org/')">Vue</a> 一个渐进式 JavaScript 框架</h3>
+                <h3 class="fix"><a href="javascript:void(0)" onclick="window.open('https://github.com/jquery/jquery')">jQuery</a> 一个快速、简洁的 JavaScript 框架</h3>
+                <h3 class="fix"><a href="javascript:void(0)" onclick="window.open('https://github.com/carhartl/jquery-cookie')">jQuery Cookie</a> 一个 jQuery 的 Cookie 增强组件</h3>
+                <h3 class="fix"><a href="javascript:void(0)" onclick="window.open('https://github.com/craftpip/jquery-confirm')">jQuery Confirm</a> 一个集 Alert,Confirm,Dialog 于一身的 jQuery 增强组件</h3>
+                <h3 class="fix"><a href="javascript:void(0)" onclick="window.open('https://www.google.com/chrome/')">Chrome</a> 一个 Google 开发的浏览器与 Web 性能分析工具</h3>
+            </div></br></br>
+        </div>
+    </div>
+</div>
+
+<script>
+    var baseURL = $.cookie("baseURL");
+    function url(todo) {
+        if (todo === 0) {
+            window.open(baseURL + "misc/api.html");
+        } else if (todo === 1) {
+            window.open(baseURL + "misc/api.xlsx");
+        } else if (todo === 2) {
+            window.open(baseURL + "misc/error.html");
+        } else {
+            window.open(baseURL + "misc/error.xlsx");
+        }
+    }
+</script>
+</body>
+</html>

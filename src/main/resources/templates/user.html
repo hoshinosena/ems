@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>user</title>
+    <link rel="stylesheet" type="text/css" href="css/user.css">
+</head>
+<body>
+<div id="mask">
+    <div id="loading" class="mask">
+        <div style="top: 25%" class="fix1">
+            <h1 style="font-size: 30px">
+                <div style="text-align: center">Electricity Management System</div>
+                <div style="text-align: center">Developed by 星野星奏</div>
+                <div style="text-align: center">Powered by Vue</div>
+            </h1>
+        </div>
+        <div style="top: 60%" class="fix1">
+            <h2 style="text-align: center">Web Application Launching, please wait a moment</h2>
+            <h2 style="text-align: center">ウェブアプリケーションを立ち上げ中、しばらくお待ちください</h2>
+            <h2 style="text-align: center">网路应用程式启动中, 请稍等片刻</h2>
+        </div>
+        <div class="g-container fix2">
+            <div id="proc"class="g-progress"></div>
+        </div>
+    </div>
+</div>
+<div id="container" class="container">
+    <nav class="nav">
+        <button class="action" @click="mainAction(0)">
+            <div class="fix"><span class="font1">个人主页</span></div>
+        </button>
+        <button class="action" @click="mainAction(1)">
+            <div class="fix"><span class="font1">我的信息</span></div>
+        </button>
+        <button class="action" @click="mainAction(2)">
+            <div class="fix"><span class="font1">余额充值</span></div>
+        </button>
+        <button class="action" @click="mainAction(3)">
+            <div class="fix"><span class="font1">操作记录</span></div>
+        </button>
+        <button class="action" @click="logout">
+            <div class="fix"><span class="font1">登出</span></div>
+        </button>
+        <button class="action" @click="about">
+            <div class="fix"><span class="font1">关于</span></div>
+        </button>
+    </nav>
+    <main class="main">
+        <div class="left"></div>
+        <div v-if="show == 0" class="middle">
+            <div id="name"><h1 class="name">{{ name }}用户</h1><h3 class="name">，欢迎使用电费管理系统</h3></div></br></br>
+            <div id="price"><h3>今日电价: {{ price }} 元/度</h3></div></br>
+            <div id="money"><h3>您的余额: {{ money }} 元</h3></div></br>
+            <div id="unki"><h3 class="unki">当前运势: </h3><button @click="updateUnki" class="unki">{{ unki < 70 ? "末吉" : unki < 80 ? "小吉" : unki < 90 ? "中吉" : "大吉"}}({{ unki }})</button></div>
+        </div>
+        <div v-if="show == 1" class="middle">
+            <div style="text-align: center"><h1>查看与修改信息</h1></div></br></br>
+            <div style="display: flex">
+                <div style="width: 25%"></div>
+                <div style="width: 30em;display: flex">
+                    <div style="width: 10%">
+                        <div style="height: 20%"></div>
+                        <h3>UID: </h3>
+                    </div>
+                    <div style="width: 40%"><input class="input input--block" :value="uid" readonly="readonly"></div>
+                </div>
+            </div>
+            <div style="display: flex">
+                <div style="width: 25%"></div>
+                <div style="width: 30em;display: flex">
+                    <div style="width: 10%">
+                        <div style="height: 20%"></div>
+                        <h3>名前: </h3>
+                    </div>
+                    <div style="width: 40%"><input class="input input--block" placeholder="name" v-model="name"></div>
+                </div>
+            </div>
+            <div style="display: flex">
+                <div style="width: 25%"></div>
+                <div style="width: 30em;display: flex">
+                    <div style="width: 10%">
+                        <div style="height: 20%"></div>
+                        <h3>账户: </h3>
+                    </div>
+                    <div style="width: 40%"><input class="input input--block" :value="username" readonly="readonly"></div>
+                </div>
+            </div>
+            <div style="display: flex">
+                <div style="width: 25%"></div>
+                <div style="width: 30em;display: flex">
+                    <div style="width: 10%">
+                        <div style="height: 20%"></div>
+                        <h3>密码: </h3>
+                    </div>
+                    <div style="width: 40%"><input class="input input--block" placeholder="password" v-model="password"></div>
+                </div>
+            </div>
+            <div style="display: flex">
+                <div style="width: 25%"></div>
+                <div style="width: 30em;display: flex">
+                    <div style="width: 10%">
+                        <div style="height: 20%"></div>
+                        <h3>电话: </h3>
+                    </div>
+                    <div style="width: 40%;"><input class="input input--block" placeholder="tel" v-model="tel"></div>
+                </div>
+            </div>
+            <div style="display: flex">
+                <div style="width: 25%"></div>
+                <div style="width: 30em;display: flex">
+                    <div style="width: 10%">
+                        <div style="height: 20%"></div>
+                        <h3>地址: </h3>
+                    </div>
+                    <div style="width: 80%"><input class="input input--block" placeholder="address" v-model="address"></div>
+                </div>
+            </div>
+            <div style="display: flex">
+                <div style="width: 25%"></div>
+                <div style="width: 30em;display: flex">
+                    <div style="width: 10%">
+                        <div style="height: 20%"></div>
+                        <h3>备注: </h3>
+                    </div>
+                    <div style="width: 80%"><input class="input input--block" placeholder="info" v-model="info"></div>
+                </div>
+            </div>
+            <div style="justify-content: center;align-items: center;display: flex">
+                <div style="width: 20%"></div>
+                <div style="width: 40%"><button class="button button--line" @click="updUser">修改</button></div>
+            </div>
+        </div>
+        <div v-if="show == 2" class="middle">
+            <div style="text-align: center"><h1>充值</h1></div></br></br>
+            <div style="height: 2.83em;display: flex">
+                <div style="width: 35%"></div>
+                <div style="display: flex">
+                    <div>
+                        <div style="height: 20%"></div>
+                        <h3>余额: {{ money }} 元</h3>
+                    </div>
+                </div>
+            </div>
+            <div style="display: flex">
+                <div style="width: 35%"></div>
+                <div style="width: 15em;display: flex">
+                    <div style="width: 20%">
+                        <div style="height: 20%"></div>
+                        <h3>充值: </h3>
+                    </div>
+                    <div style="width: 20%"><input class="input input--block" placeholder="recharge" v-model="recharge"></div>
+                    <div style="width: 12.5%"></div>
+                    <div>
+                        <div style="height: 20%"></div>
+                        <div><h3> 元</h3></div>
+                    </div>
+                </div>
+            </div>
+            <div style="display: flex">
+                <div style="width: 35%"></div>
+                <div style="width: 15em;display: flex">
+                    <div style="width: 20%">
+                        <div style="height: 20%"></div>
+                        <h3>备注: </h3>
+                    </div>
+                    <div style="width: 50%"><input class="input input--block" placeholder="info" v-model="recordInfo"></div>
+                </div>
+            </div></br>
+            <div style="justify-content: center;align-items: center;display: flex">
+                <div style="width: 20%"></div>
+                <div style="width: 40%"><button class="button button--line" @click="addRecord">确认</button></div>
+            </div>
+        </div>
+        <div v-if="show == 3" class="middle">
+            <div style="text-align: center"><h1>操作记录</h1></div></br></br>
+            <div>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <td style="width: 10%">编号</td>
+                        <td style="width: 25%">日期</td>
+                        <td style="width: 23%">操作</td>
+                        <td style="width: 30%">备注</td>
+                        <td style="width: 12%">P表编号</td>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr v-for="item in records" :key="item.rid">
+                        <td>{{ item.rid }}</td>
+                        <td>{{ item.date }}</td>
+                        <td>{{ item.op == 0 ? "管理员修改余额为" : item.op == 1 ? "用户充值" : "用户消费" }} {{ item.changes }} 元</td>
+                        <td>{{ item.info }}</td>
+                        <td>{{ item.pid }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div></br>
+            <div style=";display: flex">
+                <div style="width: 5%"></div>
+                <div style="width: 15%"><button style="width: 90%;float: left" class="button button--line" @click="turn(0)">首页</button></div>
+                <div style="width: 20%"><button style="width: 99%;float: left" class="button button--line" @click="turn(1)">上一页</button></div>
+                <div style="width: 20%;display: flex"><h3 style="width: 45%;text-align: right">{{ page }}</h3>/<h2 style="width: 45%;text-align: left">{{ pages }}</h2></div>
+                <div style="width: 20%"><button style="width: 99%;float: right" class="button button--line" @click="turn(2)">下一页</button></div>
+                <div style="width: 15%"><button style="width: 90%;float: right" class="button button--line" @click="turn(3)">尾页</button></div>
+                <div style="width: 5%"></div>
+            </div>
+        </div>
+        <div class="right"></div>
+    </main>
+</div>
+
+<script>
+    var startTime = new Date().getTime();
+    var flag = window.setInterval(() => {
+        var t = new Date().getTime()
+        if (t < startTime + 1000) {
+            document.getElementById("proc").style.width = (t - startTime) * 0.02 + "%";
+        }
+    }, 10);
+    window.onload = () => {
+        var flag1 = window.setInterval(() => {
+            if (startTime + 1400 < new Date().getTime()) {
+                clearInterval(flag);
+                clearInterval(flag1);
+                startTime = new Date().getTime();
+                flag1 = window.setInterval(() => {
+                    var t = new Date().getTime();
+                    if (startTime + 1000 < t) {
+                        clearInterval(flag1);
+                        document.getElementById("mask").innerHTML = "";
+                    } else {
+                        t -= startTime;
+                        // 应为0.00005 * t ** 2 + 0.03 * t + 20)
+                        // 进度条样式延时0.2s需要修正
+                        document.getElementById("proc").style.width = (0.00005 * t ** 2 + 0.03 * t + 40)+ "%";
+                    }
+                }, 10);
+            }
+        }, 10)
+    }
+</script>
+<link rel="stylesheet" type="text/css" href="css/generation.css">
+<link rel="stylesheet" type="text/css" href="css/jquery-confirm-min.css">
+<script src="js/jquery-1.9.1-min.js"></script>
+<script src="js/jquery.cookie-1.4.1-min.js"></script>
+<script src="js/jquery-confirm-min.js"></script>
+<script src="js/vue-3.3.4-global-min.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/api.js"></script>
+<script>
+    var baseURL = API.baseURL = $.cookie("baseURL");
+    var { createApp } = Vue;
+    var app;
+    var container = createApp({
+        data() {
+            return {
+                "uid": $.cookie("uid"),
+                "username": $.cookie("username"),
+                "password": "",
+                "name": $.cookie("name"),
+                "money": Number.parseFloat($.cookie("money")),
+                "tel": $.cookie("tel"),
+                "address": $.cookie("address"),
+                "info": $.cookie("info"),
+                "price": API.getPrice(true).price.price,
+                "unki": RandomUtil.randomInt(100),
+                "recharge": "",
+                "recordInfo": "",
+                "records": [],
+                "page": 1,
+                "pages": 1,
+                "show": 0
+            }
+        },
+        methods: {
+            updateUnki() {
+                var rand = 0;
+                while (rand < 70) {
+                    rand = RandomUtil.randomInt(100);
+                }
+                this.unki = rand;
+            },
+            mainAction(todo) {
+                this.show = todo;
+                if (todo === 0) {
+                    this.price = API.getPrice(true).price.price;
+                } else if (todo === 3) {
+                    API.getRecords(1, (result) => {
+                        if (result.code === 0) {
+                            app.page = result.page;
+                            app.pages = result.pages;
+                            app.records = result.records;
+                        }
+                    })
+                }
+            },
+            updUser() {
+                var user = {};
+                var result;
+                user.uid = $.cookie("uid");
+                user.name = this.name;
+                user.password = this.password;
+                user.tel = this.tel;
+                user.address = this.address;
+                user.info = this.info;
+                result = API.updateUser(user);
+                if (result.code === 0) {
+                    if (user.name != null) {
+                        $.cookie("name", user.name);
+                    }
+                    $.cookie("tel", user.tel);
+                    $.cookie("address", user.address);
+                    $.cookie("info", user.info);
+                    $(function () {
+                        $.alert({
+                            title: "提示",
+                            content: "资料更新成功",
+                            buttons: {
+                                ok: {
+                                    text: "好"
+                                }
+                            },
+                            boxWidth: "30%",
+                            useBootstrap: false,
+                            theme: "material",
+                            animationBounce: 1.5,
+                        })
+                    })
+                } else {
+                    $.alert({
+                        title: "提示",
+                        content: "<h3>资料更新失败</h3><h5>错误代码: "
+                            + result.code + "</h5><h5>错误提示: "
+                            + result.message + "</h5>",
+                        buttons: {
+                            ok: {
+                                text: "好"
+                            }
+                        },
+                        boxWidth: "30%",
+                        useBootstrap: false,
+                        theme: "material",
+                        animationBounce: 1.5,
+                    })
+                }
+            },
+            addRecord() {
+                var record = {};
+                var result;
+                record.changes = this.recharge;
+                record.info = this.recordInfo;
+                result = API.addRecord(record);
+                if (result.code === 0) {
+                    this.money += Number.parseFloat(this.recharge);
+                    this.recharge = "";
+                    this.recordInfo = "";
+                    $.alert({
+                        title: "提示",
+                        content: "充值成功",
+                        buttons: {
+                            ok: {
+                                text: "好"
+                            }
+                        },
+                        boxWidth: "30%",
+                        useBootstrap: false,
+                        theme: "material",
+                        animationBounce: 1.5,
+                    })
+                } else {
+                    $.alert({
+                        title: "提示",
+                        content: "<h3>充值失败</h3><h5>错误代码: "
+                            + result.code + "</h5><h5>错误提示: "
+                            + result.message + "</h5>",
+                        buttons: {
+                            ok: {
+                                text: "好"
+                            }
+                        },
+                        boxWidth: "30%",
+                        useBootstrap: false,
+                        theme: "material",
+                        animationBounce: 1.5,
+                    })
+                }
+            },
+            turn(todo) {
+                var num;
+                if (todo === 0) {
+                    num = 1;
+                } else if (todo === 1) {
+                    num = this.page - 1;
+                } else if (todo === 2) {
+                    num = this.page + 1;
+                } else {
+                    num = this.pages;
+                }
+                API.getRecords(num, (result) => {
+                    if (result.code === 0) {
+                        app.page = result.page;
+                        app.pages = result.pages;
+                        app.records = result.records;
+                    }
+                })
+            },
+            logout() {
+                $.ajax({
+                    type: "POST",
+                    url: baseURL + "to_logout",
+                    // 阻塞线程避免登出数据与
+                    // 访问根的请求到达次序不同
+                    async: false
+                });
+                var keys = document.cookie.match(/[^ =;]+(?=\=)/g);
+                if (keys) {
+                    for (var i = keys.length; i--;)
+                        document.cookie = keys[i] + '=0;expires=' + new Date(0).toUTCString() + ";path=/;";
+                }
+                sessionStorage.clear();
+                window.location.href = baseURL;
+            },
+            about() {
+                window.open(baseURL + "about.html");
+            }
+        },
+        mounted() {
+            app = this;
+        }
+    })
+    container.mount("#container");
+</script>
+</body>
+</html>
