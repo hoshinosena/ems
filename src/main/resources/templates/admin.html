@@ -419,7 +419,7 @@
                         var now = new Date().getTime();
                         // 时钟不同步 不使用伺服器下发的时间戳
                         // var delay = now - data.time;
-                        // 使用RTT/2估算，需要注意setInterval的一秒时延
+                        // 使用RTT/2估算，需要注意setInterval的1秒时延
                         // RTT / 2 = (now - startTime - 1000) / 2
                         var delay = Math.floor((now - startTime - 1000) / 2);
                         var online = Utils.getTime("MM月dd天hh时mm分ss秒", now - data.start);

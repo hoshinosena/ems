@@ -1,6 +1,12 @@
 # ems
 Electricity Management System - 电费管理系统
 
+# 1.2.2版本更新
+* 除 X64 架构的 OS X 外, 现已添加对 AArch64 架构的 OS X(iOS, iPadOS) 的支援
+* 使用 C(mach/mach.h) 语言为 OS X 平台重写系统信息访问, 透过 JNA 调用 libsysinfo-architecture.dylib 实现
+* 现在开始, 登入系统后访问 index.html 也会被重定向至个人页面
+* 修复了直接访问 index.html 导致 baseURL 缺失无法登陆的问题
+
 # 项目简介绍
 使用Java开发的简单电费管理系统
 
@@ -15,7 +21,7 @@ Sprint Boot 学习的练手项目
     * Vue 使用
     > 交互体验透过 AJAX 与 JS 实现, 不涉及表单提交与跳转
     > 
-    > 现代化 Web Applicaiton 设计
+    > 现代化 Web Application 设计
 * 访问控制
     * 权限控制
     > 严格区分普通用户与管理员并执行严格的权限控制
@@ -26,27 +32,32 @@ Sprint Boot 学习的练手项目
 * 锁机制使用, 确保不会产生并发错误
 
 ### 支援平台
-> Windows Linux MacOS
+> Windows
+> 
+> Linux
+> 
+> OS X(macOS, iOS, iPadOS)
 
 ### 环境要求
 > Java JDK 17 以降
+>
 > MySQL
 
 ### 下载
-[releases](https://github.com/hoshinosena/ems/releases)
+[Releases](https://github.com/hoshinosena/ems/releases)
 
 ### 部署
 * 通用部署
     > 在命令行中输入 `java -jar /parth/to/ems/file`
 * 后台部署
-    > Linux与MacOS可以使用 `nohup java -jar /path/to/ems/file >ems.log 2>&1 &`
+    > Linux 与 OS X 可以使用 `nohup java -jar /path/to/ems/file >ems.log 2>&1 &`
     >
     > 这将在后台运行并将日志输出到当前目录下的 ems.log 文件中
     >
     > 关闭后台进程需先使用 `lsof -i:8080` 获取相应进程的 PID, 使用 `kill -9 PID` 终止相应进程
 
 ## 反馈
-提交[issue](https://github.com/hoshinosena/ems/issues/new)
+提交[Issue](https://github.com/hoshinosena/ems/issues/new)
 
 ## 致谢
 | 提供 | 简介 | 来源 |

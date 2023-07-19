@@ -34,8 +34,13 @@ public class GenerationController {
     }
 
     @RequestMapping("/")
-    public String toIndex(HttpServletRequest req,
-                          HttpServletResponse rsp) {
+    public String toIndex() {
+        return "redirect:" + baseURL + "index.html";
+    }
+
+    @RequestMapping("/index.html")
+    public String index(HttpServletRequest req,
+                        HttpServletResponse rsp) {
         if (!rateLimiter.tryAcquire()) {
             rsp.setStatus(403);
             return "error/403";
@@ -49,7 +54,7 @@ public class GenerationController {
             return "redirect:" + baseURL + "user.html";
         }
         rsp.addCookie(new Cookie("baseURL", baseURL));
-        return "redirect:" + baseURL + "index.html";
+        return "index";
     }
 
     @PostMapping("/to_login")
